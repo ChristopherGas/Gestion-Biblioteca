@@ -1,35 +1,36 @@
-package com.gestion.bibliotecaModel;
+package com.gestion.biblioteca.Model.Bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "personal")
-public class Personal {
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+public class PersonalBean implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_personal")
 	private int idPersonal;
 	
-	@Column(name = "nombre_personal", length = 50, nullable = false)
+	@Size(max =50)
+	@NotNull
 	private String nomPersonal;
 	
-	@Column(name = "sexo_personal", length = 5, nullable = false)
+	@Size(max = 5)
+	@NotNull
 	private String sexPersonal;
 	
-	@Column(name = "cargo_personal", length = 20, nullable = false)
+	@Size(max = 20)
+	@NotNull
 	private String cargoPersonal;
 
-	public Personal() {
+	public PersonalBean() {
 		super();
 	}
 
-	public Personal(int idPersonal) {
+	public PersonalBean(int idPersonal) {
 		super();
 		this.idPersonal = idPersonal;
 	}
@@ -65,5 +66,5 @@ public class Personal {
 	public void setCargoPersonal(String cargoPersonal) {
 		this.cargoPersonal = cargoPersonal;
 	}
-
+	
 }

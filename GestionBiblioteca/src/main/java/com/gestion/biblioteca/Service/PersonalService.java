@@ -1,8 +1,8 @@
-package com.gestion.bibliotecaService;
+package com.gestion.biblioteca.Service;
 
 import java.util.List;
 
-import com.gestion.bibliotecaModelBean.PersonalBean;
+import com.gestion.biblioteca.Model.Bean.PersonalBean;
 
 public interface PersonalService {
 	

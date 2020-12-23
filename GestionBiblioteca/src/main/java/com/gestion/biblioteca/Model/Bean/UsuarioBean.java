@@ -1,28 +1,35 @@
-package com.gestion.bibliotecaModel;
+package com.gestion.biblioteca.Model.Bean;
+
+import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
-@Entity
-@Table(name = "Usuarios")
-public class Usuario {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+import com.sun.istack.NotNull;
+
+public class UsuarioBean implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Column(name = "id_usuario")
 	private int idUsuario;
-	@Column(name = "nombre_usuario", nullable = false, length = 50)
+	@NotNull
+	@Size(max = 50)
+	@Column(name = "nombre_usuario")
 	private String nombreUsuario;
-	@Column(name = "direccion_usuario", nullable = false, length = 100)
+	@NotNull
+	@Size(max = 100)
+	@Column(name = "direccion_usuario")
 	private String direccionUsuario;
-	@Column(name = "sexo_usuario", nullable = false, length = 5)
+	@NotNull
+	@Size(max = 5)
+	@Column(name = "sexo_usuario")
 	private String sexoUsuario;
-	
-	public Usuario(){}
-	public Usuario(int idUsuario){
+	public UsuarioBean() {
+	}
+	public UsuarioBean(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 	public int getIdUsuario() {
@@ -49,5 +56,5 @@ public class Usuario {
 	public void setSexoUsuario(String sexoUsuario) {
 		this.sexoUsuario = sexoUsuario;
 	}
-
+	
 }

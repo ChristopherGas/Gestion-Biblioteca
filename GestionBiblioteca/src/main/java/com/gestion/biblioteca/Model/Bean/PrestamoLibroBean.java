@@ -1,4 +1,4 @@
-package com.gestion.bibliotecaModelBean;
+package com.gestion.biblioteca.Model.Bean;
 
 import java.io.Serializable;
 import java.util.Date;

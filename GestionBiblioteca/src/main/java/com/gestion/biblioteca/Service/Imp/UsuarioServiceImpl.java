@@ -1,11 +1,11 @@
-package com.gestion.bibliotecaServiceImp;
+package com.gestion.biblioteca.Service.Imp;
 
 import java.util.List;
 
-import com.gestion.bibliotecaModel.Usuario;
-import com.gestion.bibliotecaModelBean.UsuarioBean;
-import com.gestion.bibliotecaRepostory.UsuarioRepository;
-import com.gestion.bibliotecaService.UsuarioService;
+import com.gestion.biblioteca.Model.Usuario;
+import com.gestion.biblioteca.Model.Bean.UsuarioBean;
+import com.gestion.biblioteca.Repostory.UsuarioRepository;
+import com.gestion.biblioteca.Service.UsuarioService;
 
 public class UsuarioServiceImpl implements UsuarioService{
 	

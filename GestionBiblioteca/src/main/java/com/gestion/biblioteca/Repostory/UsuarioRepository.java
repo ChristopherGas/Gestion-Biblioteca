@@ -1,8 +1,8 @@
-package com.gestion.bibliotecaRepostory;
+package com.gestion.biblioteca.Repostory;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.gestion.bibliotecaModel.Usuario;
+import com.gestion.biblioteca.Model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 	

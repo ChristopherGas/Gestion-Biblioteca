@@ -1,4 +1,4 @@
-package com.gestion.bibliotecaModel;
+package com.gestion.biblioteca.Model;
 
 import java.util.Date;
 

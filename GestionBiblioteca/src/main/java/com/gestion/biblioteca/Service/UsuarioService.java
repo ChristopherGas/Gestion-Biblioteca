@@ -1,8 +1,8 @@
-package com.gestion.bibliotecaService;
+package com.gestion.biblioteca.Service;
 
 import java.util.List;
 
-import com.gestion.bibliotecaModelBean.UsuarioBean;
+import com.gestion.biblioteca.Model.Bean.UsuarioBean;
 
 public interface UsuarioService {
 	public int saveUser(UsuarioBean usuarioBean);
